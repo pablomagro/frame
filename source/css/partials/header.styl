@@ -1,3 +1,18 @@
+// Skip link — visually hidden until focused
+.skip-link
+    position absolute
+    top -100%
+    left 0
+    padding $margin-m-0 $margin-m-2
+    background $color-background
+    color $color-text-primary
+    border $line-secondary solid $color-text-primary
+    z-index 100
+    text-style(header)
+
+    &:focus-visible
+        top 0
+
 .header
     border $line-secondary solid $color-text-primary
     text-style(header)
@@ -27,6 +42,16 @@
     &:before
         content ""
         flex-grow 1
+
+// Reset button chrome for menu controls that look like nav links
+button.menu-btn,
+.search-btn button
+    background none
+    border none
+    padding 0
+    cursor pointer
+    text-style(header)
+    color $color-text-primary
 
 .menu-item
     underline-motion(header)

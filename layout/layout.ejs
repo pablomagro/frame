@@ -4,6 +4,8 @@
     <%- partial('partials/head') %>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
     <div class="mask-border">
     </div>
 
@@ -11,7 +13,7 @@
 
       <%- partial('partials/header') %>
 
-      <div class="main">
+      <div class="main" id="main-content">
         <div class="flex-container">
           <%- body %>
         </div>
